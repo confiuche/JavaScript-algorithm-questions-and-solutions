@@ -78,30 +78,30 @@ console.log(dup([4,5,1,5,4,2]))
 // Display the highest character in a given 
 // string as seen below;
 // 1. Look{L=1,o=2,k=1}
-//let kk = prompt("Enter a word");
-//console.log(kk.split(""));
-
-//"Look";
-console.log("Look".split(""))
-
-function dupStr(str){
-    let newStr = [];
-
-    for(let p=0; p<str.length; p++){
-        let st = str[p];
-        
-        if(newStr.includes(st)===true){
-
-        }else{
-            newStr.push[st]
-        }
-        return newStr
-    }
-}
-
-
 // 2. Drill{D=1,r=1,i=1,l=2}
 
+function dupString(arrStr) {
+    let result = [];
+
+    for (let i = 0; i < arrStr.length; i++) {
+
+        if (result.includes(arrStr[i])) {
+            result = result.filter(str => str !== arrStr[i])
+        } else {
+            
+            result.push(arrStr[i])
+        }
+    }
+
+    return result;
+}
+// arrNo = [2,4,5,2,6,3,5];
+// arrNo = [1,3,2,1,3,2]
+// console.log(dup(arrNo))
+let lo = "look"
+let dr = "Drill"
+console.log(dupString(lo.split('')))
+console.log(dupString(dr.split('')))
 
 
 //Question3)
